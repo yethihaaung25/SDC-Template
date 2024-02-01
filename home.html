@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,36 +11,46 @@
     <!-- box icon css link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <!-- animate hover css link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
+
 <body>
     <!-- nav bar start -->
-    <header>
-        <a href="./home.html" class="logo">Standing Desk</a>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo"><a href="./home.html">Standing Desks</a></div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
 
-        <!-- menu open -->
-        <ul class="navbar">
-            <li><a href="./home.html" class="active">Home</a></li>
-            <div class="dropdown">
-                <button class="dropbtn">Dropdown 
-                  <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                  <a href="#">Desks</a>
-                  <a href="#">Chairs</a>
-                  <a href="#">Other Products</a>
-                </div>
-              </div> 
-            <li><a href="./healthbenefit.html">Health Benefits</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <i class='bx bx-search'></i>
-            <input type="text" class="search-bar" placeholder="Search here...">
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+
+                <li><a href="./home.html">Home</a></li>
+                <li class="services">
+                    <a href="/">Rising Desk</a>
+
+                    <!-- DROPDOWN MENU -->
+                    <ul class="dropdown">
+                        <li><a href="/">Desks</a></li>
+                        <li><a href="/">Chairs</a></li>
+                        <li><a href="/">Other Products</a></li>
+                    </ul>
+                </li>
+
+
+                <li><a href="./contact.html">Contact Us</a></li>
+                <li><a href="/">Health Benefits</a></li>
+                <li><a href="/">About Us</a></li>
+                <li><a href="/"><i class="bx buy bx-shopping-bag"></i> Cart</a></li>
+                <li><a href="/">Register</a></li>
+                <li><a href="/">Login</a></li>
+            </div>
         </ul>
-        
-        <a href="#" class="cart-bag"><i class='bx buy bx-shopping-bag'></i></a>
-        <a href="#" class="btn">Sign in</a>
-        <!-- menu close -->
-    </header>
+    </nav>
     <!-- nav bar end -->
 
     <!-- cover start -->
@@ -66,7 +77,7 @@
                     <img src="./Image/Special Offer/1.png" alt="">
                 </div>
                 <a href="#"><i class="fa-solid fa-circle-info"></i></a>
-                <h3>EZ Desk Air</h3> <span>$400</span> $280               
+                <h3>EZ Desk Air</h3> <span>$400</span> $280
             </div>
 
             <!-- Game 1 -->
@@ -123,8 +134,8 @@
                 <h3>Swivel Shower Chair</h3> <span>$20</span> - $8
             </div>
 
-             <!-- Game 1 -->
-             <div class="box">
+            <!-- Game 1 -->
+            <div class="box">
                 <div class="img-box">
                     <img src="./Image/Special Offer/8.jpg" alt="">
                 </div>
@@ -136,13 +147,13 @@
     </section>
     <!-- game section end -->
 
-     <!-- footer start -->
+    <!-- footer start -->
     <div class="region">
         <i class="fa-solid fa-globe"></i>
         <span>Country / Region: Myanmar</span>
     </div>
-     <div class="footer">
-        <a href="./home.html" class="logo">Standing Desk Ltd</a>
+    <div class="footer">
+        <div class="logo"><a href="./home.html">Standing Desks</a></div>
         <div class="social">
             <a href="#" class="logo"><i class='bx bxl-facebook'></i></a>
             <a href="#" class="logo"><i class='bx bxl-twitter'></i></a>
@@ -157,4 +168,5 @@
     </div>
     <!-- footer end -->
 </body>
+
 </html>

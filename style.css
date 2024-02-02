@@ -115,16 +115,6 @@ input[type=checkbox] {
     user-select: none;
 }
 
-.search-bar {
-    font-size: 0.8rem;
-    width: 200px;
-    height: 25px;
-    margin: auto 0;
-    padding-left: 30px;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 1px 1px 5px var(--theme-color--);
-}
 input[type=text] {
     float: right;
     padding: 4px;
@@ -132,7 +122,7 @@ input[type=text] {
     margin-top: 8px;
     margin-right: 16px;
     font-size: 14px;
-  }
+}
 
 header a {
     color: var(--text-color--);
@@ -401,15 +391,6 @@ p .fa-tag {
 
 /* game page section start */
 
-.heading-gaming {
-    text-align: center;
-    max-width: 968px;
-    margin: 0 auto 10px auto;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    border-bottom: 1px solid var(--theme-color--);
-}
-
 
 /* game page section end */
 
@@ -418,17 +399,6 @@ p .fa-tag {
 
 .status-text {
     color: var(--warning-color--);
-}
-
-.fa-gripfire {
-    position: absolute;
-    font-size: 2rem;
-    padding-left: 1px;
-    margin-left: 11.5rem;
-    margin-top: 27px;
-    color: var(--warning-color--);
-    border-radius: 10px;
-    box-shadow: 1px 1px 1px var(--warning-color--);
 }
 
 
@@ -503,7 +473,8 @@ p .fa-tag {
 
 
 /* shopping cart start */
-.cart-body{
+
+.cart-body {
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -511,7 +482,8 @@ p .fa-tag {
     justify-content: center;
     align-items: center;
     background-color: var(--main-color--);
-   }
+}
+
 .Cart-Container {
     width: 70%;
     height: 100vh;
@@ -695,6 +667,153 @@ hr {
 }
 
 
+/* modal pop up start */
+
+.md-close {
+    background-color: var(--theme-color--);
+    color: var(--text-color--);
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.md-close:hover {
+    background-color: var(--main-color--);
+}
+
+body>a {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.md-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    max-width: 630px;
+    min-width: 320px;
+    height: auto;
+    z-index: 2000;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.md-modal:target {
+    visibility: visible;
+}
+
+.md-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 0;
+    background: rgba(15, 17, 143, 0.8);
+    transition: all 0.3s;
+}
+
+.md-modal:target~.md-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Content styles */
+
+.md-content {
+    color: var(--text-color--);
+    background: var(--mini-bg-color);
+    position: relative;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+
+.md-content h3 {
+    margin: 0;
+    padding: 0.1em;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 300;
+    opacity: 0.8;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px 3px 0 0;
+}
+
+.md-content h4 {
+    font-size: 0.9rem;
+}
+
+.md-content ul {
+    font-size: 0.9rem;
+}
+
+.md-content .image-box {
+    width: 100%;
+}
+
+.md-content>div {
+    padding: 15px 40px 30px;
+    margin: 0;
+    font-weight: 300;
+    font-size: 1.15em;
+}
+
+.md-content>div p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.md-content>div ul {
+    margin: 0;
+    padding: 0 0 30px 20px;
+}
+
+.md-content>div ul li {
+    padding: 5px 0;
+}
+
+.md-content a {
+    display: block;
+    margin: 0 auto;
+    font-size: 0.8em;
+}
+
+
+/* Effect */
+
+.md-modal .md-content {
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.md-modal:target .md-content {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+/* modal pop up end */
+
+
 /* shopping cart end */
 
 
@@ -733,36 +852,31 @@ hr {
         transform: translateX(35%);
     }
     .dropdown li:hover {
-        background-color:var(--mini-bg-color);
+        background-color: var(--mini-bg-color);
     }
-
-    .Cart-Container{
+    .Cart-Container {
         width: 100%;
-     }
-    .Cart-Items{
+    }
+    .Cart-Items {
         flex-direction: column;
         align-items: center;
         row-gap: 0.3rem;
     }
-
-    .Cart-Items .image-box{
+    .Cart-Items .image-box {
         padding-bottom: 5.5rem;
         background-color: red;
         height: 0.1rem;
     }
-
-    .Cart-Items .about{
+    .Cart-Items .about {
         height: 8rem;
     }
-
-    .subtitle{
+    .subtitle {
         bottom: 1rem;
     }
-
-    hr{
+    hr {
         margin-top: 13.5rem;
     }
-    .total{
+    .total {
         flex-direction: column;
         align-items: center;
     }
@@ -817,7 +931,7 @@ hr {
         padding-left: 6.5px;
         margin-left: 12rem;
     }
-    .total{
+    .total {
         align-items: flex-start;
     }
 }
@@ -834,7 +948,7 @@ hr {
         padding-left: 6.5px;
         margin-left: 11rem;
     }
-    .total{
+    .total {
         align-items: flex-start;
     }
 }
@@ -848,7 +962,7 @@ hr {
         padding-left: 6.5px;
         margin-left: 9.5rem;
     }
-    .total{
+    .total {
         align-items: flex-start;
     }
 }
@@ -877,7 +991,7 @@ hr {
     .footer .logo {
         padding: 0 5px;
     }
-    .total{
+    .total {
         align-items: flex-start;
     }
 }
@@ -892,7 +1006,6 @@ hr {
     .home-text article {
         font-size: 0.4rem;
     }
-
     .shopping-cart {
         font-size: 0.6rem;
         width: 140px;
@@ -905,24 +1018,22 @@ hr {
     .fa-circle-info {
         margin-left: 20rem;
     }
-
     .footer .logo {
         padding: 0 1px;
     }
-    .total{
+    .total {
         align-items: flex-start;
     }
 }
 
-@media (max-width:430px){
+@media (max-width:430px) {
     .fa-circle-info {
         margin-left: 8.5rem;
     }
-
-    .Cart-Container{
-       width: 100%;
+    .Cart-Container {
+        width: 100%;
     }
-    .total{
+    .total {
         align-items: flex-start;
     }
 }
@@ -943,7 +1054,7 @@ hr {
         align-items: center;
         row-gap: 1rem;
     }
-    .total{
+    .total {
         align-items: flex-start;
     }
 }
@@ -953,7 +1064,7 @@ hr {
         margin-left: 15rem;
         margin-top: 20px;
     }
-    .total{
+    .total {
         align-items: flex-start;
     }
 }
